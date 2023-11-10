@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:inventory_app/navigation_bar.dart';
-import 'package:inventory_app/pages/home_page.dart';
+import 'package:inventory_app/pages/login_page.dart';
 import 'package:lottie/lottie.dart';
 
 class SplashPage extends StatefulWidget {
@@ -17,7 +16,7 @@ class _SplashPageState extends State<SplashPage> {
       const Duration(seconds: 5),
       () => Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (builder) => const NavigationBarPage(),
+          builder: (builder) => const LoginPage(),
         ),
       ),
     );

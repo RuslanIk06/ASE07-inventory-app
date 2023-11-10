@@ -64,10 +64,6 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("List Inventory"),
-        centerTitle: true,
-      ),
       body: GridView.builder(
         itemCount: dataInventory.length,
         gridDelegate:
