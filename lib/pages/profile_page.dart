@@ -16,7 +16,7 @@ class _ProfilePageState extends State<ProfilePage> {
         child: Center(
           child: Container(
             decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 2, 170, 38),
+                color: Colors.blueGrey,
                 borderRadius: BorderRadius.circular(16)),
             height: 500,
             child: Center(
@@ -67,16 +67,32 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                   ),
                   const SizedBox(height: 16),
-                  ElevatedButton(
-                    onPressed: () {
-                      print("Selamat Datang");
-                    },
-                    child: const Text("Login"),
-                  ),
-                  ElevatedButton.icon(
-                    onPressed: () {},
-                    icon: const Icon(Icons.login),
-                    label: const Text("Login"),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      TextButton(
+                        onPressed: () {
+                          print("Text Button");
+                        },
+                        child: const Text(
+                          "Register",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 24,
+                          ),
+                        ),
+                      ),
+                      IconButton(
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
+                        icon: const Icon(
+                          Icons.logout,
+                          size: 24,
+                          color: Colors.white,
+                        ),
+                      )
+                    ],
                   )
                 ],
               ),

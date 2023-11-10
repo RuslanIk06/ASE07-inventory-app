@@ -24,9 +24,19 @@ class _LoginPageState extends State<LoginPage> {
       });
 
       Navigator.of(context).push(
-        MaterialPageRoute(builder: (builder) => NavigationBarPage()),
+        MaterialPageRoute(builder: (builder) => const NavigationBarPage()),
       );
+
+      _controlerEmail.clear();
+      _controlerPassword.clear();
     }
+  }
+
+  @override
+  void dispose() {
+    _controlerPassword.dispose();
+    _controlerEmail.dispose();
+    super.dispose();
   }
 
   @override
@@ -74,10 +84,11 @@ class _LoginPageState extends State<LoginPage> {
                   controller: _controlerPassword,
                   keyboardType: TextInputType.number,
                   textInputAction: TextInputAction.next,
+                  obscureText: true,
                   decoration: const InputDecoration(
                     label: Text("Password"),
                     hintText: 'Masukan Password',
-                    icon: Icon(Icons.person),
+                    icon: Icon(Icons.password),
                   ),
                   validator: (value) {
                     if (value == null || value.length < 6) {
