@@ -32,7 +32,7 @@ class _DetailPageState extends State<DetailPage> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(16),
+          padding: const EdgeInsets.all(16),
           child: Column(
             children: [
               Image.asset(widget.image),

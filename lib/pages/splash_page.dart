@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:inventory_app/navigation_bar.dart';
 import 'package:inventory_app/pages/home_page.dart';
 import 'package:lottie/lottie.dart';
 
@@ -16,7 +17,7 @@ class _SplashPageState extends State<SplashPage> {
       const Duration(seconds: 5),
       () => Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (builder) => const HomePage(),
+          builder: (builder) => const NavigationBarPage(),
         ),
       ),
     );
@@ -40,7 +41,7 @@ class _SplashPageState extends State<SplashPage> {
               ),
             ),
             Lottie.asset("assets/animation.json"),
-            CircularProgressIndicator(
+            const CircularProgressIndicator(
               color: Colors.blueGrey,
             ),
           ],

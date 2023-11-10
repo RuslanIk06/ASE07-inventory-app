@@ -65,7 +65,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("List Inventory"),
+        title: const Text("List Inventory"),
         centerTitle: true,
       ),
       body: GridView.builder(
@@ -87,7 +87,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             child: Padding(
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               child: Column(
                 children: [
                   Expanded(
