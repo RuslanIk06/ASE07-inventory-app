@@ -1,3 +1,4 @@
+import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:inventory_app/navigationbar_page.dart';
 
@@ -95,6 +96,16 @@ class _LoginPageState extends State<LoginPage> {
                   onPressed: () {
                     if (formKey.currentState!.validate()) {
                       onSubmit();
+                    } else {
+                      AwesomeDialog(
+                        context: context,
+                        dialogType: DialogType.error,
+                        animType: AnimType.scale,
+                        showCloseIcon: true,
+                        title: 'Warning',
+                        desc: 'Invalid email / password',
+                        btnOkOnPress: () {},
+                      ).show();
                     }
                   },
                   icon: const Icon(Icons.login_sharp),
